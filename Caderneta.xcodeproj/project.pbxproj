@@ -13,6 +13,8 @@
 		CC5E49F31EBD3589007E660B /* Caderneta.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CC5E49F11EBD3589007E660B /* Caderneta.xcdatamodeld */; };
 		CC5E49F51EBD3589007E660B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC5E49F41EBD3589007E660B /* Assets.xcassets */; };
 		CC5E49F81EBD3589007E660B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC5E49F61EBD3589007E660B /* LaunchScreen.storyboard */; };
+		CC8FB3CF1EBE249600B72DC4 /* galaxy-star-galaxy-light-sky-night.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CC8FB3CE1EBE249600B72DC4 /* galaxy-star-galaxy-light-sky-night.jpg */; };
+		CC8FB3D11EBE25AE00B72DC4 /* CadernetaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8FB3D01EBE25AE00B72DC4 /* CadernetaViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		CC5E49F41EBD3589007E660B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CC5E49F71EBD3589007E660B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CC5E49F91EBD3589007E660B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CC8FB3CE1EBE249600B72DC4 /* galaxy-star-galaxy-light-sky-night.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "galaxy-star-galaxy-light-sky-night.jpg"; sourceTree = "<group>"; };
+		CC8FB3D01EBE25AE00B72DC4 /* CadernetaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CadernetaViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,8 +60,10 @@
 		CC5E49E91EBD3589007E660B /* Caderneta */ = {
 			isa = PBXGroup;
 			children = (
+				CC8FB3CE1EBE249600B72DC4 /* galaxy-star-galaxy-light-sky-night.jpg */,
 				CC5E49EA1EBD3589007E660B /* AppDelegate.swift */,
 				CC5E49EC1EBD3589007E660B /* ViewController.swift */,
+				CC8FB3D01EBE25AE00B72DC4 /* CadernetaViewController.swift */,
 				CC5E49EE1EBD3589007E660B /* Main.storyboard */,
 				CC5E49F41EBD3589007E660B /* Assets.xcassets */,
 				CC5E49F61EBD3589007E660B /* LaunchScreen.storyboard */,
@@ -127,6 +133,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CC5E49F81EBD3589007E660B /* LaunchScreen.storyboard in Resources */,
+				CC8FB3CF1EBE249600B72DC4 /* galaxy-star-galaxy-light-sky-night.jpg in Resources */,
 				CC5E49F51EBD3589007E660B /* Assets.xcassets in Resources */,
 				CC5E49F01EBD3589007E660B /* Main.storyboard in Resources */,
 			);
@@ -141,6 +148,7 @@
 			files = (
 				CC5E49ED1EBD3589007E660B /* ViewController.swift in Sources */,
 				CC5E49F31EBD3589007E660B /* Caderneta.xcdatamodeld in Sources */,
+				CC8FB3D11EBE25AE00B72DC4 /* CadernetaViewController.swift in Sources */,
 				CC5E49EB1EBD3589007E660B /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -305,6 +313,7 @@
 				CC5E49FE1EBD3589007E660B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

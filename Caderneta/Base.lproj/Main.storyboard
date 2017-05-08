@@ -13,7 +13,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Caderneta" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="BYZ-38-t0r" customClass="ViewController" customModule="Caderneta" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -21,7 +21,19 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="lwj-oT-TG3">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="lwj-oT-TG3" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="FBv-DJ-Kxk"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="lwj-oT-TG3" secondAttribute="bottom" id="QA8-Ly-xVC"/>
+                            <constraint firstAttribute="trailing" secondItem="lwj-oT-TG3" secondAttribute="trailing" id="fVo-jo-sYV"/>
+                            <constraint firstItem="lwj-oT-TG3" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="upy-Ra-g2k"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="sJG-LU-5xk">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="9oR-Ma-dSx">
@@ -30,15 +42,18 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="tabletView" destination="lwj-oT-TG3" id="e0S-Tu-zF7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1079.2" y="138.98050974512745"/>
+            <point key="canvasLocation" x="1023" y="-544"/>
         </scene>
-        <!--View Controller-->
+        <!--Caderneta View Controller-->
         <scene sceneID="331-EZ-dei">
             <objects>
-                <viewController id="iuS-yN-mJD" sceneMemberID="viewController">
+                <viewController id="iuS-yN-mJD" customClass="CadernetaViewController" customModule="Caderneta" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="LZq-8F-hmS"/>
                         <viewControllerLayoutGuide type="bottom" id="bce-QQ-8VF"/>
@@ -47,14 +62,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="GR6-cm-ZfR">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="galaxy-star-galaxy-light-sky-night.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="GR6-cm-ZfR">
                                 <rect key="frame" x="47" y="84" width="280" height="200"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="OnD-5I-dxj"/>
                                     <constraint firstAttribute="width" constant="280" id="xDW-RZ-zB2"/>
                                 </constraints>
                             </imageView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8na-Wh-Czu">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nome" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8na-Wh-Czu">
                                 <rect key="frame" x="47.5" y="324" width="280" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -63,6 +78,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DCc-L3-gEN">
                                 <rect key="frame" x="172" y="374" width="30" height="30"/>
                                 <state key="normal" title="Add"/>
+                                <connections>
+                                    <action selector="addTapped:" destination="iuS-yN-mJD" eventType="touchUpInside" id="YIv-9O-fMO"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -78,14 +96,26 @@
                     </view>
                     <navigationItem key="navigationItem" id="cKZ-1T-Q16">
                         <rightBarButtonItems>
-                            <barButtonItem systemItem="camera" id="8Jo-Vp-SQ8"/>
-                            <barButtonItem title="Photos" id="qYj-lY-3Ia"/>
+                            <barButtonItem systemItem="camera" id="8Jo-Vp-SQ8">
+                                <connections>
+                                    <action selector="cameraTapped:" destination="iuS-yN-mJD" id="Zk4-3l-BLL"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="Photos" id="qYj-lY-3Ia">
+                                <connections>
+                                    <action selector="photosTapped:" destination="iuS-yN-mJD" id="0Va-lZ-Xfm"/>
+                                </connections>
+                            </barButtonItem>
                         </rightBarButtonItems>
                     </navigationItem>
+                    <connections>
+                        <outlet property="cadernetaImageView" destination="GR6-cm-ZfR" id="8VO-YO-M8J"/>
+                        <outlet property="nomeTextField" destination="8na-Wh-Czu" id="tJd-5o-e3z"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hK4-2X-XKN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1785" y="139"/>
+            <point key="canvasLocation" x="1837.5999999999999" y="-545.57721139430294"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="L37-1r-gQK">
@@ -106,4 +136,7 @@
             <point key="canvasLocation" x="140" y="-543.77811094452773"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="galaxy-star-galaxy-light-sky-night.jpg" width="1920" height="1280"/>
+    </resources>
 </document>
